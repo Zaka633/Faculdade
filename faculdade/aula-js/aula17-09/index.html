@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hello Word
+    <div id="container"></div>
+    <button id="addelemento" ">Adicionar parágrafo</button>
+
+    <script>const novoElemento = document.createElement("div");
+        novoElemento.textContent="este é um novo elemnto";
+        novoElemento.classList.add("classe-exemplo");
+        novoElemento.style.color = "blue";
+        const container= document.getElementById("container");
+        container.appendChild(novoElemento);
+        const botaoadd = document.getElementById("addelemento");
+       botaoadd.addEventListener ("click", function(){
+            const novoparagrafo = document.createElement("p");
+            novoparagrafo.textContent = "este é um novo paragrafo";
+            container.appendChild(novoparagrafo);
+       })
+
+
+        </script>
+        <script src="script.js"></script>
+    
+</body>
+</html>
