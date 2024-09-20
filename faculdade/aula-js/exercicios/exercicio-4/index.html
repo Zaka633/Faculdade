@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>digite seu salário</h2>
+    <input id="vlrsalario" type="text">
+    <button id="btao" type="submit"> calcular </button>
+    
+    <div id="resultadofinal">
+    </div>
+
+    <script>
+
+        const resultadofinal = document.getElementById("resultadofinal");
+        const btao = document.getElementById("btao");
+
+        btao.addEventListener("click", function() {
+                var vlrsalario = parseFloat(document.getElementById("vlrsalario").value);
+                var grat = vlrsalario * 0.05;
+                var imposto = vlrsalario * 0.07;
+                const novoparagrafo = document.createElement("p");
+                novoparagrafo.textContent = vlrsalario + grat - imposto;
+                resultadofinal.appendChild(novoparagrafo);
+
+
+                console.log(vlrsalario)
+
+        })
+    </script>
+
+
+
+    
+</body>
+</html>

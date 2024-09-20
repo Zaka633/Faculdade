@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário PHP</title>
+</head>
+<body>
+
+    <h1>Formulário de Entrada</h1>
+
+    <!--parte do nome-->
+
+    <form method="get" action="index.php">
+     <p><label for="nome">Nome:</label>
+     <input type="text" id="nome" name="nome"> </p>
+
+     <!--idade-->
+
+     <P><label for="idade">Nascimento</label>
+     <input type="date" id="idade" name="idade"  required  ></P>
+    
+     <!-- senha -->
+
+     <label for="senha">Senha:</label>
+     <input type="password" id="senha" name="senha" required>
+     <button type="button" onclick="toggleSenha()" id="toggleButton">
+        <img id="icon" src="Ofechado.png" alt="Mostrar Senha" />
+    </button>
+     
+     <button type="submit">Enviar</button>
+
+    </form>
+
+    <script>
+         function toggleSenha() {
+            var senhaInput = document.getElementById('senha');
+            var icon = document.getElementById('icon');
+            if (senhaInput.type === 'password') {
+                senhaInput.type = 'text';
+                icon.src = 'Oaberto.png';
+                icon.alt = 'Ocultar Senha';
+            } else {
+                senhaInput.type = 'password';
+                icon.src = 'Ofechado.png'; 
+                icon.alt = 'Mostrar Senha.';
+            }
+        }
+    </script>
+</body>
+</html>

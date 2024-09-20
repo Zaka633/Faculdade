@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>marque seu sexo:</h3>
+    <input type="radio" id="masculino" name="sexo" value="masculino">
+    <label for="masculino">masculino</label>
+    <input type="radio" id="feminino" name="sexo" value="feminino" >
+    <label for="feminino">feminino</label><br>
+    <h3>digite sua idade:</h3>
+    <input type="number" id="idade" required>
+    <button id="enviar">enviar</button>
+
+    <div id="resultado"></div>
+
+
+
+<script>
+const idade = document.getElementById("idade");
+const resultado = document.getElementById("resultado");
+const enviar = document.getElementById("enviar");
+const novoparagrafo = document.createElement("p");
+var ingresso;   
+    enviar.addEventListener("click", function(){
+        
+            var sexo = document.querySelector('input[name="sexo"]:checked');
+           
+            if(document.querySelector('input[name="sexo"]:checked')&& sexo.value =="feminino" && idade.value<"17" )
+            {ingresso= " R$5,00 "
+            }else if(sexo.value == "masculino" && idade.value<"17" ){ingresso= " R$7,00 "
+            }else{ingresso = " R$10,00"}
+            novoparagrafo.textContent = "você é do sexo "+sexo.value+" e tem "+idade.value+" anos, portanto deverá pagar:"+ingresso;
+            resultado.appendChild(novoparagrafo);
+        
+        })
+
+</script>
+
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>digite seu salário</h2>
+    <input id="vlrsalario" type="text">
+    <h2>valor do financiamento:</h2>
+    <input id="vlrfinanc" type="text">
+    <button id="btao" type="submit"> calcular </button>
+    
+    <div id="calcularfin">
+    </div>
+
+    <script>
+
+        const calcularfin = document.getElementById("calcularfin");
+        const btao = document.getElementById("btao");
+
+        btao.addEventListener("click", function() {
+                var vlrsalario = document.getElementById("vlrsalario").value;
+                var vlrfinanc = document.getElementById("vlrfinanc").value;
+
+                console.log(vlrsalario)
+                console.log(vlrfinanc)
+
+
+                if( vlrfinanc <= 5* vlrsalario){  
+                    const novoparagrafo1 = document.createElement("p")
+                    const novoparagrafo2 = document.createElement("p")
+                    novoparagrafo1.textContent= "financiamento concedido"
+                    novoparagrafo2.textContent= "Obrigado por nos consultar"
+                    calcularfin.appendChild(novoparagrafo1);
+                    calcularfin.appendChild(novoparagrafo2);}
+
+                else{const novoparagrafo1 = document.createElement("p")
+                     const novoparagrafo2 = document.createElement("p")
+                    novoparagrafo1.textContent= "financiamento negado"
+                    novoparagrafo2.textContent= "Obrigado por nos consultar"
+                    calcularfin.appendChild(novoparagrafo1);
+                    calcularfin.appendChild(novoparagrafo2);
+        };
+    });
+    </script>
+
+    <script src="script.js"></script>
+
+    
+</body>
+</html>

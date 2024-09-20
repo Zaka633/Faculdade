@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>digite seu código:</h3>
+    <input type="text" id="codigo">
+    <h3>digite seu salário:</h3>
+    <input type="text" id="salario">
+    <button id="enviar">enviar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+            const resultado = document.getElementById("resultado");
+            const enviar = document.getElementById("enviar");
+            const novoparagrafo = document.createElement("p");
+            var cargo;
+            var novosalario;
+            var aumento;
+                enviar.addEventListener("click", function(){
+                    const codigo = document.getElementById("codigo");
+                    var salario = parseFloat(document.getElementById("salario").value);
+           
+                    if(codigo.value== "1")
+                    {cargo= "escriturário";
+                     aumento= salario* 0.50;
+                     novosalario= salario+aumento;
+
+                    }else if(codigo.value== "2")
+                    {cargo= "secretário";
+                     aumento= salario* 0.35;
+                     novosalario= salario+aumento;
+
+                    }else if(codigo.value== "3")
+                    {cargo= "caixa";
+                     aumento= salario* 0.20;
+                     novosalario= salario+aumento;
+                    }else if(codigo.value== "4")
+                    {cargo= "gerente";
+                     aumento= salario* 0.10;
+                     novosalario= salario+aumento;
+                    }else
+                    {cargo= "diretor";
+                    novosalario= salario
+                    }
+                     
+                    novoparagrafo.textContent = "seu cargo é "+cargo+" você recebeu um aumento de "+aumento+" e agora você recebe "+novosalario;
+                    resultado.appendChild(novoparagrafo);
+        
+        })
+</script>
+</body>
+</html>
