@@ -10,9 +10,9 @@ public class divisaosenha {
         String senhaCadastrada = scanner.nextLine();
 
         
-        System.out.print("Digite o primeiro número inteiro: ");
+        System.out.print("Digite o primeiro número: ");
         int numero1 = scanner.nextInt();
-        System.out.print("Digite o segundo número inteiro: ");
+        System.out.print("Digite o segundo número: ");
         int numero2 = scanner.nextInt();
 
         
