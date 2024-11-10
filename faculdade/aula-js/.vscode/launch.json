@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "msedge",
+            "name": "http://C:\\Users\\heloh\\OneDrive\\Área de Trabalho\\faculdade\\faculdade\\aula-js\\aula22-10\\aula.js",
+            "request": "launch",
+            "url": "http://C:\\Users\\heloh\\OneDrive\\Área de Trabalho\\faculdade\\faculdade\\aula-js\\aula22-10\\aula.js"
+        }
+    ]
+}
